@@ -3,17 +3,334 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nombre de tu tienda</title>
+  <title>La casita de Mathi | Accesorios para celular</title>
+  <meta name="description" content="Fundas, cables y accesorios para celular con atención cercana. Descubre La casita de Mathi y coordina tu pedido por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
 
-  <header>
-    <h1>Nombre de tu tienda</h1>
+  <div class="barra-anuncio">
+    <div class="contenedor barra-anuncio-contenido">
+      <p>Atención personalizada y pedidos coordinados por WhatsApp</p>
+      <a href="https://wa.me/51986983274" data-whatsapp target="_blank" rel="noopener noreferrer">Escríbenos <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+      <a class="marca" href="index.html" aria-label="La casita de Mathi, ir al inicio">
+        <img class="marca-icono" src="img/logo-marca.webp" alt="" width="530" height="535">
+        <img class="marca-texto" src="img/logo-texto.webp" alt="La casita de Mathi" width="1078" height="130">
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="cables.html">Cables</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="boton boton--whatsapp boton--compacto" href="https://wa.me/51986983274" data-whatsapp target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+        <svg class="icono-whatsapp" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.1-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+        <span class="boton-whatsapp-texto">WhatsApp</span>
+      </a>
+    </div>
   </header>
 
-  <main>
-    <p>Accesorios para celular</p>
+  <main id="contenido">
+    <section class="hero">
+      <div class="contenedor hero-grid">
+        <div class="hero-texto">
+          <p class="eyebrow"><span aria-hidden="true"></span> Accesorios con cariño</p>
+          <h1>Tu celular, <em>con estilo</em> y bien cuidado.</h1>
+          <p class="hero-desc">
+            Fundas, cables y accesorios elegidos para acompañarte todos los días.
+            Atención cercana y pedidos fáciles por WhatsApp.
+          </p>
+
+          <div class="hero-acciones">
+            <a class="boton boton--verde" href="productos.html">Explorar productos</a>
+            <a class="boton boton--fantasma" href="cables.html">Ver cables</a>
+          </div>
+
+          <dl class="hero-datos">
+            <div>
+              <dt>Desde S/ 35</dt>
+              <dd>Fundas para tu modelo</dd>
+            </div>
+            <div>
+              <dt>7 tipos</dt>
+              <dd>De cables disponibles</dd>
+            </div>
+            <div>
+              <dt>1 a 1</dt>
+              <dd>Atención personalizada</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Muestra de fundas, cables y audífonos">
+          <div class="hero-mancha" aria-hidden="true"></div>
+          <figure class="hero-tarjeta">
+            <img src="img/productos/funda-diseno.svg" alt="Funda para celular con diseño floral" width="400" height="500">
+            <figcaption>
+              <span>Fundas</span>
+              <strong>Desde S/ 35</strong>
+            </figcaption>
+          </figure>
+          <figure class="hero-mini hero-mini--cable">
+            <img src="img/productos/cable-usb-c.svg" alt="" width="400" height="500">
+            <figcaption>Cables</figcaption>
+          </figure>
+          <figure class="hero-mini hero-mini--audio">
+            <img src="img/productos/audifonos-inalambricos.svg" alt="" width="400" height="500">
+            <figcaption>Audio</figcaption>
+          </figure>
+          <span class="hero-sello">Hecho con cariño</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion categorias" aria-labelledby="categorias-titulo">
+      <div class="contenedor">
+        <div class="seccion-encabezado">
+          <div>
+            <p class="eyebrow">Explora la tienda</p>
+            <h2 class="seccion-titulo" id="categorias-titulo">Todo para tu celular, en un solo lugar</h2>
+          </div>
+          <p class="seccion-intro">Elige una categoría y encuentra justo lo que buscas.</p>
+        </div>
+
+        <div class="categorias-grid">
+          <a class="categoria-card categoria-card--sage" href="productos.html#fundas">
+            <span class="categoria-numero">01</span>
+            <div class="categoria-media">
+              <img src="img/productos/funda-color.svg" alt="" width="400" height="500">
+            </div>
+            <div class="categoria-texto">
+              <h3>Fundas</h3>
+              <p>Transparentes, de color y con diseño.</p>
+              <span class="categoria-enlace">Ver modelos <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+
+          <a class="categoria-card categoria-card--coral" href="cables.html">
+            <span class="categoria-numero">02</span>
+            <div class="categoria-media">
+              <img src="img/productos/cable-usb.svg" alt="" width="400" height="500">
+            </div>
+            <div class="categoria-texto">
+              <h3>Cables</h3>
+              <p>V8, USB-C, Lightning y más conexiones.</p>
+              <span class="categoria-enlace">Ver cables <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+
+          <a class="categoria-card categoria-card--sand" href="productos.html#otros-accesorios">
+            <span class="categoria-numero">03</span>
+            <div class="categoria-media">
+              <img src="img/productos/audifonos-inalambricos.svg" alt="" width="400" height="500">
+            </div>
+            <div class="categoria-texto">
+              <h3>Audio</h3>
+              <p>Inalámbricos, jack, USB-C y Lightning.</p>
+              <span class="categoria-enlace">Ver audífonos <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+
+          <a class="categoria-card categoria-card--sky" href="productos.html#otros-accesorios">
+            <span class="categoria-numero">04</span>
+            <div class="categoria-media">
+              <img src="img/productos/cargador.svg" alt="" width="400" height="500">
+            </div>
+            <div class="categoria-texto">
+              <h3>Cargadores</h3>
+              <p>Carga rápida y protectores de pantalla.</p>
+              <span class="categoria-enlace">Ver accesorios <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="beneficios" aria-label="Beneficios de comprar en La casita de Mathi">
+      <div class="contenedor beneficios-grid">
+        <article class="beneficio">
+          <span class="beneficio-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.7 8.7 0 0 1-4-1L3 20l1.2-4.3a8.3 8.3 0 0 1-1.2-4.2A8.4 8.4 0 0 1 11.5 3 8.4 8.4 0 0 1 21 11.5Z"/><path d="M8.5 11.5h7M8.5 8.5h4"/></svg>
+          </span>
+          <div>
+            <h3>Atención cercana</h3>
+            <p>Te escuchamos y te ayudamos a elegir lo que mejor se adapta a ti.</p>
+          </div>
+        </article>
+
+        <article class="beneficio">
+          <span class="beneficio-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m18.5 15 .9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9.9-2.6Z"/></svg>
+          </span>
+          <div>
+            <h3>Selección cuidadosa</h3>
+            <p>Elegimos cada accesorio pensando en su utilidad y en tu celular.</p>
+          </div>
+        </article>
+
+        <article class="beneficio">
+          <span class="beneficio-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 8V6a6 6 0 0 1 12 0v2"/><path d="M4 8h16l-1 12H5L4 8Z"/><path d="M9 12v4M15 12v4"/></svg>
+          </span>
+          <div>
+            <h3>Compra sencilla</h3>
+            <p>Coordina tu pedido por WhatsApp de forma rápida y sin complicaciones.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion sobre" id="nosotros" aria-labelledby="nosotros-titulo">
+      <div class="contenedor sobre-grid">
+        <div class="sobre-visual" aria-hidden="true">
+          <div class="sobre-foto sobre-foto--grande">
+            <img src="img/productos/funda-color.svg" alt="" width="400" height="500">
+          </div>
+          <div class="sobre-foto sobre-foto--pequena">
+            <img src="img/productos/audifonos-cable.svg" alt="" width="400" height="500">
+          </div>
+          <div class="sobre-sello">
+            <img src="img/logo-marca.webp" alt="" width="530" height="535">
+            <span>La casita<br>de Mathi</span>
+          </div>
+        </div>
+
+        <div class="sobre-texto">
+          <p class="eyebrow">Sobre nosotros</p>
+          <h2 class="seccion-titulo" id="nosotros-titulo">Un rinconcito para consentir tu celular</h2>
+          <p>
+            En La casita de Mathi creemos que los pequeños detalles también cuidan.
+            Por eso seleccionamos accesorios prácticos, lindos y útiles para que tu
+            celular te acompañe todos los días.
+          </p>
+          <p>
+            Atendemos de forma cercana y te ayudamos a encontrar lo que buscas según
+            tu modelo y tu estilo. Si tienes dudas, escríbenos: estamos para ayudarte.
+          </p>
+
+          <ul class="sobre-lista">
+            <li><span aria-hidden="true">01</span> Fundas para modelos comerciales e iPhone.</li>
+            <li><span aria-hidden="true">02</span> Cables, audio y protectores en un mismo lugar.</li>
+            <li><span aria-hidden="true">03</span> Asesoría directa antes de comprar.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion contacto" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="contenedor">
+        <div class="contacto-panel">
+          <div class="contacto-info">
+            <p class="eyebrow eyebrow--claro">Estamos cerca</p>
+            <h2 id="contacto-titulo">Hablemos de tu próximo accesorio</h2>
+            <p class="contacto-texto">
+              Visítanos en la tienda o escríbenos por WhatsApp.
+              Te ayudamos a elegir el accesorio ideal para tu celular.
+            </p>
+
+            <ul class="contacto-datos">
+              <li>
+                <span class="contacto-dato-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </span>
+                <div>
+                  <strong>Dirección</strong>
+                  <p>Arica 320</p>
+                </div>
+              </li>
+              <li>
+                <span class="contacto-dato-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <div>
+                  <strong>Horario</strong>
+                  <p>Lunes a sábado: 8:00 a. m. a 8:30 p. m.<br>Domingo: 8:00 a. m. a 6:00 p. m.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a class="boton boton--coral" href="https://wa.me/51986983274" data-whatsapp target="_blank" rel="noopener noreferrer">
+              Escribir por WhatsApp
+            </a>
+          </div>
+
+          <form class="contacto-formulario" id="formulario-whatsapp">
+            <h3>Cuéntanos qué necesitas</h3>
+            <p>Completa tus datos y te atendemos por WhatsApp.</p>
+
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+            </div>
+
+            <div class="campo">
+              <label for="modelo">Modelo de celular</label>
+              <input type="text" id="modelo" name="modelo" placeholder="Ej. Samsung Galaxy A54" required>
+            </div>
+
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué accesorio buscas" required></textarea>
+            </div>
+
+            <button type="submit" class="boton boton--verde boton--ancho">Enviar por WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="pie">
+    <div class="contenedor pie-grid">
+      <div class="pie-marca">
+        <div class="pie-logo">
+          <img src="img/logo-completo.webp" alt="La casita de Mathi" width="1098" height="712">
+        </div>
+        <p>Accesorios para celular con atención cercana y detalles que cuidan.</p>
+      </div>
+
+      <div class="pie-columna">
+        <h3>Tienda</h3>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html#fundas">Fundas</a>
+        <a href="productos.html#otros-accesorios">Accesorios</a>
+        <a href="cables.html">Cables</a>
+      </div>
+
+      <div class="pie-columna">
+        <h3>Ayuda</h3>
+        <a href="index.html#nosotros">Sobre nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="https://wa.me/51986983274" data-whatsapp target="_blank" rel="noopener noreferrer">Pedidos por WhatsApp</a>
+      </div>
+
+      <div class="pie-columna">
+        <h3>Visítanos</h3>
+        <p>Arica 320</p>
+        <p>Lun a sáb: 8:00 a. m. – 8:30 p. m.<br>Dom: 8:00 a. m. – 6:00 p. m.</p>
+      </div>
+    </div>
+
+    <div class="contenedor pie-bottom">
+      <p>&copy; 2026 La casita de Mathi.</p>
+      <p>Hecho con cariño para tu celular.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-flotante" href="https://wa.me/51986983274" data-whatsapp target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp" title="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.1-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  </a>
 </body>
 </html>
