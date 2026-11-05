@@ -150,6 +150,68 @@ const ACCESORIOS = [
   },
 ];
 
+const AUDIFONOS_PAGINA = [
+  {
+    categoria: "audifonos",
+    tipo: "Inalámbricos",
+    nombre: "Audífonos inalámbricos",
+    precio: null,
+    imagen: "audifonos-inalambricos",
+    respaldo: "audifonos-inalambricos",
+  },
+  {
+    categoria: "audifonos",
+    tipo: "Con cable",
+    nombre: "Audífonos con cable",
+    precio: null,
+    imagen: "audifonos-con-cable",
+    respaldo: "audifonos-cable",
+  },
+  {
+    categoria: "audifonos",
+    tipo: "Diadema",
+    nombre: "Audífonos de diadema",
+    precio: null,
+    imagen: "audifonos-diadema",
+    respaldo: "audifonos-inalambricos",
+  },
+];
+
+const CARGADORES_PAGINA = [
+  {
+    categoria: "cargadores",
+    tipo: "De pared",
+    nombre: "Cargador de pared",
+    precio: null,
+    imagen: "cargador-pared",
+    respaldo: "cargador",
+  },
+  {
+    categoria: "cargadores",
+    tipo: "Rápidos",
+    nombre: "Cargador rápido",
+    precio: null,
+    imagen: "cargador-rapido",
+    respaldo: "cargador",
+  },
+  {
+    categoria: "cargadores",
+    tipo: "Para auto",
+    nombre: "Cargador para auto",
+    precio: null,
+    imagen: "cargador-auto",
+    respaldo: "cargador",
+  },
+  {
+    categoria: "cargadores",
+    tipo: "Inalámbricos",
+    nombre: "Cargador inalámbrico",
+    precio: null,
+    imagen: "cargador-inalambrico",
+    respaldo: "cargador",
+  },
+];
+
 function crearUrlWhatsApp(texto) {
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(texto)}`;
 }
@@ -677,6 +739,96 @@ function iniciarCables() {
     });
 }
 
+function iniciarGaleriaProductos(idContenedor, productos) {
+  const contenedor = document.getElementById(idContenedor);
+
+  if (!contenedor) {
+    return;
+  }
+
+  productos.forEach((producto) => {
+    contenedor.appendChild(crearTarjetaAccesorio(producto));
+  });
+}
+
+function iniciarAudifonos() {
+  iniciarGaleriaProductos("audifonos-grid", AUDIFONOS_PAGINA);
+}
+
+function iniciarCargadores() {
+  iniciarGaleriaProductos("cargadores-grid", CARGADORES_PAGINA);
+}
+
+function iniciarMenuNavegacion() {
+  const boton = document.querySelector(".menu-boton");
+  const navegacion = document.getElementById("menu-principal");
+
+  if (!boton || !navegacion) {
+    return;
+  }
+
+  const icono = boton.querySelector(".menu-boton-icono");
+  const menuEscritorio = window.matchMedia("(min-width: 1121px)");
+
+  function cerrarMenu() {
+    navegacion.classList.remove("navegacion--abierta");
+    boton.setAttribute("aria-expanded", "false");
+    boton.setAttribute("aria-label", "Abrir menú");
+
+    if (icono) {
+      icono.textContent = "☰";
+    }
+  }
+
+  boton.addEventListener("click", () => {
+    const abierto = navegacion.classList.toggle("navegacion--abierta");
+    boton.setAttribute("aria-expanded", String(abierto));
+    boton.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+
+    if (icono) {
+      icono.textContent = abierto ? "×" : "☰";
+    }
+  });
+
+  navegacion.addEventListener("click", (evento) => {
+    if (evento.target.closest("a")) {
+      cerrarMenu();
+    }
+  });
+
+  document.addEventListener("click", (evento) => {
+    if (!navegacion.classList.contains("navegacion--abierta")) {
+      return;
+    }
+
+    if (navegacion.contains(evento.target) || boton.contains(evento.target)) {
+      return;
+    }
+
+    cerrarMenu();
+  });
+
+  document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Escape") {
+      cerrarMenu();
+    }
+  });
+
+  const alCambiarVista = (evento) => {
+    if (evento.matches) {
+      cerrarMenu();
+    }
+  };
+
+  if (typeof menuEscritorio.addEventListener === "function") {
+    menuEscritorio.addEventListener("change", alCambiarVista);
+  } else {
+    menuEscritorio.addListener(alCambiarVista);
+  }
+
+  cerrarMenu();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const enlacesWhatsApp = document.querySelectorAll("[data-whatsapp]");
 
@@ -711,6 +863,9 @@ document.addEventListener("DOMContentLoaded", () => {
   iniciarFundasComerciales();
   iniciarAccesorios();
   iniciarCables();
+  iniciarAudifonos();
+  iniciarCargadores();
+  iniciarMenuNavegacion();
 
   const formulario = document.getElementById("formulario-whatsapp");
 

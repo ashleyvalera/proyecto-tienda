@@ -216,6 +216,34 @@ section[id] {
   font-weight: 600;
 }
 
+.menu-boton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(47, 107, 95, 0.24);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--verde-oscuro);
+  font: inherit;
+  cursor: pointer;
+  transition: background-color var(--transicion), border-color var(--transicion),
+    color var(--transicion);
+}
+
+.menu-boton:hover,
+.menu-boton[aria-expanded="true"] {
+  background-color: rgba(47, 107, 95, 0.08);
+  border-color: rgba(47, 107, 95, 0.4);
+}
+
+.menu-boton-icono {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
 /* ============================================================
    Botones
    ============================================================ */
@@ -1341,7 +1369,9 @@ section[id] {
   transform: rotate(-6deg);
 }
 
-.page-hero--cables .page-hero-fondo {
+.page-hero--cables .page-hero-fondo,
+.page-hero--audifonos .page-hero-fondo,
+.page-hero--cargadores .page-hero-fondo {
   background-color: var(--verde-suave);
 }
 
@@ -1788,6 +1818,64 @@ section[id] {
    Diseño adaptable
    ============================================================ */
 
+@media (max-width: 1120px) {
+  .encabezado-contenido {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 0.55rem 0.75rem;
+    min-height: 0;
+    padding-block: 0.7rem;
+  }
+
+  .marca {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .marca-texto {
+    min-width: 0;
+    object-fit: contain;
+  }
+
+  .boton--compacto {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .menu-boton {
+    display: inline-flex;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .navegacion {
+    display: none;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.15rem;
+    padding-top: 0.35rem;
+  }
+
+  .navegacion.navegacion--abierta {
+    display: flex;
+  }
+
+  .navegacion a {
+    justify-content: flex-start;
+    min-height: 44px;
+    padding: 0.6rem 0.9rem;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+}
+
 @media (max-width: 1024px) {
   .categorias-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1806,45 +1894,6 @@ section[id] {
   .barra-anuncio-contenido {
     flex-wrap: wrap;
     padding-block: 0.4rem;
-  }
-
-  .encabezado-contenido {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.65rem 1rem;
-    min-height: 0;
-    padding-block: 0.7rem;
-  }
-
-  .marca {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .boton--compacto {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .navegacion {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 100%;
-    margin-left: 0;
-    padding-bottom: 0.1rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .navegacion::-webkit-scrollbar {
-    display: none;
-  }
-
-  .navegacion a {
-    min-height: 40px;
-    padding: 0.45rem 0.7rem;
-    font-size: 0.88rem;
-    white-space: nowrap;
   }
 
   .hero-grid,
@@ -2158,6 +2207,24 @@ section[id] {
   .fundas-vacio .boton-producto,
   .accesorios-vacio .boton-producto {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .encabezado-contenido {
+    gap: 0.55rem 0.5rem;
+  }
+
+  .marca {
+    gap: 0.45rem;
+  }
+
+  .boton--whatsapp .boton-whatsapp-texto {
+    display: none;
+  }
+
+  .boton--whatsapp.boton--compacto {
+    padding: 0.55rem 0.7rem;
   }
 }
 
