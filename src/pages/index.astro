@@ -1,0 +1,25 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import HomeHero from '@components/home/HomeHero.astro';
+import CatalogBento from '@components/home/CatalogBento.astro';
+import { StoreHeader } from '@components/shared/StoreHeader';
+import { FeaturedProducts } from '@components/home/FeaturedProducts';
+import { HomeFooter } from '@components/home/HomeFooter';
+import { getHomeShowcaseUseCase } from '@application/products/get-home-showcase.usecase';
+import { STORE_INFO } from '@domain/shared/store.constants';
+
+const { featuredProducts } = await getHomeShowcaseUseCase();
+---
+
+<MainLayout
+  title={`${STORE_INFO.name} | Accesorios para celular`}
+  description="Fundas, protectores, cables, cargadores y audífonos para tu celular. Atención cercana en Arica 320 y pedidos por WhatsApp."
+>
+  <StoreHeader client:load currentPath="/" />
+  <main>
+    <HomeHero />
+    <FeaturedProducts client:load products={featuredProducts} />
+    <CatalogBento />
+  </main>
+  <HomeFooter client:visible />
+</MainLayout>

@@ -1,0 +1,126 @@
+---
+import { CATEGORY_META } from '@domain/shared/store.constants';
+---
+
+<section class="mx-auto max-w-[1280px] px-5 sm:px-8 pt-6 pb-14">
+  <div class="mb-6">
+    <h2 class="inline-block border-b-2 border-orange-500 pb-1.5 text-xl sm:text-2xl font-medium tracking-tight text-zinc-900">
+      Catálogo
+    </h2>
+  </div>
+
+  <!-- Bento Grid asimétrico de 4 columnas (idéntico a la referencia Home) -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:auto-rows-[165px]">
+    <!-- Columna 1: Tarjeta alta Fundas -->
+    <a
+      href="/catalogo?categoria=fundas"
+      class="group relative lg:row-span-2 rounded-xl bg-[#f5f5f7] p-6 overflow-hidden flex flex-col justify-between min-h-[300px] lg:min-h-0 hover:bg-[#efeff2] transition-colors"
+    >
+      <div class="relative z-10">
+        <h3 class="text-xl font-semibold text-zinc-900">
+          {CATEGORY_META.fundas.label}
+        </h3>
+        <p class="mt-0.5 text-xs text-zinc-500">{CATEGORY_META.fundas.priceHint}</p>
+      </div>
+      <img
+        src="/images/funda-diseno.jpg"
+        alt="Fundas con diseño y color entero"
+        loading="lazy"
+        class="mx-auto mt-4 h-52 w-52 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+      />
+    </a>
+
+    <!-- Columna 2 arriba: Audífonos -->
+    <a
+      href="/catalogo?categoria=audifonos"
+      class="group relative rounded-xl bg-[#f5f5f7] p-5 overflow-hidden flex items-center justify-between min-h-[155px] lg:min-h-0 hover:bg-[#efeff2] transition-colors"
+    >
+      <div class="relative z-10 self-start">
+        <h3 class="text-xl font-semibold text-zinc-900">
+          {CATEGORY_META.audifonos.label}
+        </h3>
+        <p class="mt-0.5 text-xs text-zinc-500">{CATEGORY_META.audifonos.priceHint}</p>
+      </div>
+      <img
+        src="/images/audifonos-inalambricos.jpg"
+        alt="Audífonos inalámbricos y con cable"
+        loading="lazy"
+        class="h-28 w-28 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+      />
+    </a>
+
+    <!-- Columna 3: Tarjeta alta Cargadores -->
+    <a
+      href="/catalogo?categoria=cargadores"
+      class="group relative lg:row-span-2 rounded-xl bg-[#f5f5f7] p-6 overflow-hidden flex flex-col justify-between min-h-[300px] lg:min-h-0 hover:bg-[#efeff2] transition-colors"
+    >
+      <div class="relative z-10">
+        <h3 class="text-xl font-semibold text-zinc-900">
+          {CATEGORY_META.cargadores.label}
+        </h3>
+        <p class="mt-0.5 text-xs text-zinc-500">{CATEGORY_META.cargadores.priceHint}</p>
+      </div>
+      <img
+        src="/images/cargador-rapido.jpg"
+        alt="Cargadores rápidos USB-C, de pared y auto"
+        loading="lazy"
+        class="mx-auto mt-4 h-52 w-52 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+      />
+    </a>
+
+    <!-- Columna 4 arriba: Protectores -->
+    <a
+      href="/catalogo?categoria=protectores"
+      class="group relative rounded-xl bg-[#f5f5f7] p-5 overflow-hidden flex items-center justify-between min-h-[155px] lg:min-h-0 hover:bg-[#efeff2] transition-colors"
+    >
+      <div class="relative z-10 self-start">
+        <h3 class="text-xl font-semibold text-zinc-900">
+          {CATEGORY_META.protectores.label}
+        </h3>
+        <p class="mt-0.5 text-xs text-zinc-500">{CATEGORY_META.protectores.priceHint}</p>
+      </div>
+      <img
+        src="/images/protector-vidrio.jpg"
+        alt="Protectores de pantalla y cámara"
+        loading="lazy"
+        class="h-28 w-28 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+      />
+    </a>
+
+    <!-- Columna 2 abajo: Cables -->
+    <a
+      href="/catalogo?categoria=cables"
+      class="group relative rounded-xl bg-[#f5f5f7] p-5 overflow-hidden flex items-center justify-between min-h-[155px] lg:min-h-0 hover:bg-[#efeff2] transition-colors"
+    >
+      <div class="relative z-10 self-start">
+        <h3 class="text-xl font-semibold text-zinc-900">
+          {CATEGORY_META.cables.label}
+        </h3>
+        <p class="mt-0.5 text-xs text-zinc-500">{CATEGORY_META.cables.priceHint}</p>
+      </div>
+      <img
+        src="/images/cable-usbc.jpg"
+        alt="Cables USB-C, Lightning y V8"
+        loading="lazy"
+        class="h-28 w-28 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+      />
+    </a>
+
+    <!-- Columna 4 abajo: Diadema / Audio Pro -->
+    <a
+      href="/catalogo?categoria=audifonos&q=diadema"
+      class="group relative rounded-xl bg-[#f5f5f7] p-5 overflow-hidden flex items-center justify-between min-h-[155px] lg:min-h-0 hover:bg-[#efeff2] transition-colors"
+    >
+      <div class="relative z-10 self-start">
+        <h3 class="text-xl font-semibold text-zinc-900">Diadema</h3>
+        <p class="mt-0.5 text-xs text-zinc-500">Consultar modelos</p>
+      </div>
+      <img
+        src="/images/audifonos-diadema.jpg"
+        alt="Audífonos de diadema"
+        loading="lazy"
+        class="h-28 w-28 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+      />
+    </a>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { CatalogExplorer } from '@components/catalog/CatalogExplorer';
+import { getCatalogUseCase } from '@application/products/get-catalog.usecase';
+import { STORE_INFO } from '@domain/shared/store.constants';
+
+const { allProducts, dataSource } = await getCatalogUseCase();
+---
+
+<MainLayout
+  title={`Catálogo | ${STORE_INFO.name}`}
+  description="Explora fundas para Samsung, Motorola, Xiaomi e iPhone, protectores, cables, cargadores y audífonos en La casita de Mathi."
+  bodyClass="bg-white text-zinc-900"
+>
+  <CatalogExplorer
+    client:load
+    initialProducts={allProducts}
+    dataSource={dataSource}
+  />
+</MainLayout>
